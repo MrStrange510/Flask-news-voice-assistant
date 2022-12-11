@@ -1,6 +1,9 @@
-1. reflink open kar ani last cha 3 package install kar 
+1. Module 3 vala folder vs code madha open kar  
+2. reflink open kar ani last cha 3 package install kar 
+(reflink html file  hai mag browser var yal ny tar vs code madha view kara)
 pip install flask
 pip install flask-login
 pip install flask-sqlalchemy.
 (vs code >> terminal >> commands)
-2. 
+3.main.py vali file run kara , terminal madha 1 ip address yail ( *Running on http://127.0.0.1:8000) , ctrl button hold kara ani tya address var click kara. browser open hoil ani aapla website show karal 
+4. kai problem hasal tar tumi tumchi aai ghala (*Sorry , discord var ya me sangtav mag)
