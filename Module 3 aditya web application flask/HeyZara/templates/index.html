@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hey ZARA !!{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style2.css') }}">
+</head>
+
+<body>
+    <div class="main_grid">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Hey ZARA !!</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+                </div>
+            </div> 
+        </nav>
+        <div class="news_articles">
+            {% block new %}
+            <h1 class="title">Top Headline's</h1>
+            <div class="news_card" id="test">
+                {% for title,desc,url,img,p_date,content in t_contents %}
+                <div class="items">
+                    <a class="img"><img src="{{img}}"></a>
+                    <h3 class="title">{{title}}</h3>
+                    <p class="desc">{{content}}</p><br>
+                    <div class="p_date">
+                        <a href="{{url}}" class="url">Read more...</a>
+                        {{p_date}}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endblock %}
+        </div>
+        <div class="sidebar">
+            <h1>Speech<br>Recognition</h1>
+            <div class="container">
+                <div class="texts">
+                    <p id="innercontaint">Say something...</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            END of page
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>

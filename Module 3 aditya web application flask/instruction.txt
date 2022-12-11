@@ -1,0 +1,6 @@
+1. reflink open kar ani last cha 3 package install kar 
+pip install flask
+pip install flask-login
+pip install flask-sqlalchemy.
+(vs code >> terminal >> commands)
+2. 

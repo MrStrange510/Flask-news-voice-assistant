@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block title %}Sports news{% endblock %}
+{% block new %}
+<h1 class="title">Sports news</h1>
+<div class="news_card" id="test">
+    {% for title,desc,url,img,p_date,content in s_contents %}
+    <div class="items">
+        <a class="img"><img src="{{img}}"></a>
+        <h3 class="title">{{title}}</h3>
+        <p class="desc">{{content}}</p><br>
+        <div class="p_date">
+            <a href="{{url}}" class="url">Read more...</a>
+            {{p_date}}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
